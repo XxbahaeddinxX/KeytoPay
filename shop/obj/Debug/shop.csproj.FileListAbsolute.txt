@@ -20,3 +20,6 @@ C:\Users\Bahaeddin\Documents\Visual Studio 2015\Projects\shop\shop\obj\Debug\App
 C:\Users\Bahaeddin\Documents\Visual Studio 2015\Projects\shop\shop\bin\Debug\shop.exe.CodeAnalysisLog.xml
 C:\Users\Bahaeddin\Documents\Visual Studio 2015\Projects\shop\shop\bin\Debug\shop.exe.lastcodeanalysissucceeded
 C:\Users\Bahaeddin\Documents\Visual Studio 2015\Projects\shop\shop\obj\Debug\shop.csprojResolveAssemblyReference.cache
+J:\ProjectGit\KeytoPay\shop\bin\Debug\shop.exe.config
+J:\ProjectGit\KeytoPay\shop\obj\Debug\shop.exe
+J:\ProjectGit\KeytoPay\shop\obj\Debug\shop.pdb

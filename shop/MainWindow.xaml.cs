@@ -38,14 +38,15 @@ namespace shop
         private void button_Click(object sender, RoutedEventArgs e)
         {
 
-            if (keyPrice.Text != "" && keytoPeso.Text != "" && gamePrice.Text !="")
+            if (keyPrice.Text != "" && keytoPeso.Text != "" && gamePrice.Text !="" && Percent.Text !="")
             {
 
                 double a = Convert.ToDouble(keyPrice.Text) / Convert.ToDouble(keytoPeso.Text);
                 a = Math.Round(a, 3);
                 oPtT.Content = Convert.ToString(a) + " Toman ";
 
-        
+                double number = a * Convert.ToDouble(gamePrice.Text);        
+                priceToman.Content = number.ToString("#,#");
 
 
 
@@ -63,6 +64,11 @@ namespace shop
             {
                 keyPrice.Text = double.Parse(keyPrice.Text).ToString("0,0");
             }
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
         }
     }
 }

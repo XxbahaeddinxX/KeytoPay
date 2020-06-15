@@ -102,7 +102,7 @@
                 <TextBlock HorizontalAlignment="Right" Text="Game P Toman" Margin="0,3,-53,-3" Padding="10,0,0,0" FontSize="15" VerticalAlignment="Center" Width="120" />
             </Grid>
         </Label>
-        <TextBox x:Name="priceToman" TextWrapping="Wrap" Margin="51,130,50,403" ToolTip="Enter Game Price" BorderBrush="#89005DFF" TextAlignment="Center" Grid.Row="1" Grid.Column="2" TextChanged="priceToman_TextChanged"/>
+        <Label x:Name="priceToman" Content="" Grid.Column="2" HorizontalAlignment="Left" Height="38" Margin="71,130,0,0" Grid.Row="1" VerticalAlignment="Top" Width="122" FontSize="15" Foreground="#FFA46FE4"/>
         <Rectangle Grid.Column="3" Fill="#FFF3F3F3" Height="140" Width="189" Margin="43,69,30,0" Grid.Row="1" Stroke="#FF349BF1" VerticalAlignment="Top" RadiusX="10" RadiusY="10"/>
         <Label Margin="42,43,30,480" Background="#FF349BF1" Foreground="#DDFFFFFF" Grid.Row="1" Grid.Column="3">
             <Grid Width="105">

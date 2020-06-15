@@ -45,13 +45,9 @@ namespace shop
                 a = Math.Round(a, 3);
                 oPtT.Content = Convert.ToString(a) + " Toman ";
 
-                double b = a * Convert.ToDouble(gamePrice.Text);
-                priceToman.Text = Convert.ToString(b);
+        
 
-                int c = Convert.ToInt32(b) / 100 ;
-                
 
-                finalPrice.Content = Convert.ToString(c) + Convert.ToString(b);
 
             }
 
@@ -66,14 +62,6 @@ namespace shop
             if (keyPrice.Text != "")
             {
                 keyPrice.Text = double.Parse(keyPrice.Text).ToString("0,0");
-            }
-        }
-
-        private void priceToman_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            if (priceToman.Text != "")
-            {
-                priceToman.Text = double.Parse(priceToman.Text).ToString("0,0");
             }
         }
     }

@@ -45,13 +45,13 @@ namespace shop
                 a = Math.Round(a, 3);
                 oPtT.Content = Convert.ToString(a) + " Toman ";
 
-                int b = Convert.ToInt32(a) * Convert.ToInt32(gamePrice.Text);
+                double b = a * Convert.ToDouble(gamePrice.Text);
                 priceToman.Text = Convert.ToString(b);
 
                 int c = Convert.ToInt32(b) / 100 ;
-                int d = c * 15 + b;
+                
 
-                finalPrice.Content = Convert.ToString(d) + Convert.ToString(b);
+                finalPrice.Content = Convert.ToString(c) + Convert.ToString(b);
 
             }
 

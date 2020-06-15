@@ -76,14 +76,12 @@
         </Grid>
         <Grid x:Name="GridBarraTitulo" Grid.ColumnSpan="4" Background="#FF8522bd" MouseDown="GridBarraTitulo_MouseDown" HorizontalAlignment="Right" Width="1024">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="10,0">
-                <Button Style="{DynamicResource MaterialDesignFloatingActionButton}" Width="25" Height="25" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Margin="0,3">
-                    <materialDesign:PackIcon Kind="Bell"/>
-                </Button>
-                <Button Style="{DynamicResource MaterialDesignFloatingActionButton}" Width="25" Height="25" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White">
+
+                <Button Style="{DynamicResource MaterialDesignFloatingActionButton}" Width="25" Height="25" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" >
                     <materialDesign:PackIcon Kind="WindowMinimize"/>
                 </Button>
                 <Button x:Name="ButtonFechar" Style="{DynamicResource MaterialDesignFloatingActionButton}" Width="25" Height="25" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="ButtonFechar_Click">
-                    <materialDesign:PackIcon Kind="Power"/>
+                    <materialDesign:PackIcon Kind="Power"></materialDesign:PackIcon>
                 </Button>
             </StackPanel>
         </Grid>
@@ -109,7 +107,7 @@
         <Label Margin="42,43,30,480" Background="#FF349BF1" Foreground="#DDFFFFFF" Grid.Row="1" Grid.Column="3">
             <Grid Width="105">
                 <materialDesign:PackIcon Kind="Money100" VerticalAlignment="Center" Margin="10,3,0,-3"/>
-                <TextBlock HorizontalAlignment="Right" Text="Peso to Toman" Margin="0,3,-53,-3" Padding="10,0,0,0" FontSize="15" VerticalAlignment="Center" Width="120" />
+                <TextBlock HorizontalAlignment="Right" Text="price with profit" Margin="0,3,-53,-3" Padding="10,0,0,0" FontSize="15" VerticalAlignment="Center" Width="120" />
             </Grid>
         </Label>
         <Label x:Name="finalPrice" Content="" Grid.Column="3" HorizontalAlignment="Left" Height="38" Margin="78,130,0,0" Grid.Row="1" VerticalAlignment="Top" Width="121" FontSize="15" Foreground="#FFA46FE4"/>

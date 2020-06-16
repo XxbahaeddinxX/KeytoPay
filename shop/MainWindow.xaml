@@ -77,7 +77,7 @@
         <Grid x:Name="GridBarraTitulo" Grid.ColumnSpan="4" Background="#FF8522bd" MouseDown="GridBarraTitulo_MouseDown" HorizontalAlignment="Right" Width="1024">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="10,0">
 
-                <Button Style="{DynamicResource MaterialDesignFloatingActionButton}" Width="25" Height="25" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="Button_Click_1" >
+                <Button x:Name="minimizeButton" Style="{DynamicResource MaterialDesignFloatingActionButton}" Width="25" Height="25" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="minimizeButton_Click" >
                     <materialDesign:PackIcon Kind="WindowMinimize"/>
                 </Button>
                 <Button x:Name="ButtonFechar" Style="{DynamicResource MaterialDesignFloatingActionButton}" Width="25" Height="25" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="ButtonFechar_Click">
@@ -111,5 +111,9 @@
             </Grid>
         </Label>
         <Label x:Name="finalPrice" Content="" Grid.Column="3" HorizontalAlignment="Left" Height="38" Margin="72,250,0,0" Grid.Row="1" VerticalAlignment="Top" Width="121" FontSize="15" Foreground="#FFA46FE4"/>
+        <Rectangle Grid.Column="1" Fill="#FFF3F3F3" Height="55" Margin="37,419,212,0" Grid.Row="1" Stroke="#FF349BF1" VerticalAlignment="Top" RadiusX="10" RadiusY="10" Grid.ColumnSpan="2"/>
+        <Label Content="Status : " Grid.Column="1" HorizontalAlignment="Left" Margin="49,431,0,0" Grid.Row="1" VerticalAlignment="Top" Grid.ColumnSpan="1" Width="55"/>
+        <Label x:Name="statusLabel" Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="105,433,0,0" Grid.Row="1" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="182"/>
+        <WebBrowser x:Name="moneyConvertOnline" Grid.Column="2" HorizontalAlignment="Left" Height="173" Margin="151,374,0,0" Grid.Row="1" VerticalAlignment="Top" Width="336" Grid.ColumnSpan="2"/>
     </Grid>
 </Window>

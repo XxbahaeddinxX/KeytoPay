@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MaterialDesignColors.Recommended;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,12 @@ namespace shop
         public MainWindow()
         {
             InitializeComponent();
+            //moneyConvertOnline.Navigate("https://www.xe.com/currencyconverter/convert/?Amount=1&From=ARS&To=IRR");
+            //روی نمایش انلاین قیمت پزو به ریال یه سرچی بزن - یکی دو نمونه پیدا کردم . تست کردم جواب نداد 
+            // فردا یه
+            //API
+            // پیدا میکنم که در لحظه قیمت پزو و ریال رو بهت بده
+
         }
 
         private void ButtonFechar_Click(object sender, RoutedEventArgs e)
@@ -37,25 +44,26 @@ namespace shop
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-
-            if (keyPrice.Text != "" && keytoPeso.Text != "" && gamePrice.Text !="" && Percent.Text !="")
+            if (string.IsNullOrWhiteSpace(keyPrice.Text) ||
+                string.IsNullOrWhiteSpace(keytoPeso.Text) ||
+                string.IsNullOrWhiteSpace(gamePrice.Text) ||
+                string.IsNullOrWhiteSpace(Percent.Text)
+                )
             {
-
-                double a = Convert.ToDouble(keyPrice.Text) / Convert.ToDouble(keytoPeso.Text);
-                a = Math.Round(a, 3);
-                oPtT.Content = Convert.ToString(a) + " Toman ";
-
-                double number = a * Convert.ToDouble(gamePrice.Text);        
-                priceToman.Content = number.ToString("#,#");
-
-
+                //MessageBox.Show("Please fill in the values.", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
+                statusLabel.Content = "Please enter the required values.";
+                statusLabel.Foreground = Brushes.Red;
+                return;
 
             }
 
-            else
-            {
-                MessageBox.Show("Please fill in the values.", "Warning", MessageBoxButton.OK,MessageBoxImage.Warning);
-            }
+            double divisionKeyPriceByKeytoPeso = Convert.ToDouble(keyPrice.Text) / Convert.ToDouble(keytoPeso.Text);
+            double divisionRoundValue = Math.Round(divisionKeyPriceByKeytoPeso, 3);
+            oPtT.Content = Convert.ToString(divisionRoundValue) + " Toman ";
+
+            double number = divisionRoundValue * Convert.ToDouble(gamePrice.Text);
+            priceToman.Content = number.ToString("#,#");
+
         }
 
         private void keyPrice_LostFocus(object sender, RoutedEventArgs e)
@@ -66,7 +74,7 @@ namespace shop
             }
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void minimizeButton_Click(object sender, RoutedEventArgs e)
         {
             this.WindowState = WindowState.Minimized;
         }
